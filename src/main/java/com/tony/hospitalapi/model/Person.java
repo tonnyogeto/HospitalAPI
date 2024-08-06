@@ -28,11 +28,13 @@ public class Person {
     @Column(name="date_of_birth")
     private String dateOfBirth;
 
+    @Enumerated(EnumType.STRING)
     @Column(name="gender")
-    private String gender;
+    private Gender gender;
 
+    @Enumerated(EnumType.STRING)
     @Column(name="marital_status")
-    private String maritalStatus;
+    private MaritalStatus maritalStatus;
 
     @Column(name="weight")
     private Integer weight;

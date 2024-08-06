@@ -1,16 +1,17 @@
 package com.tony.hospitalapi.controller;
+import com.tony.hospitalapi.dto.PersonCreationDto;
 import com.tony.hospitalapi.dto.PersonFetchDto;
 import com.tony.hospitalapi.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 
-@RestController("/api/person")
+@RestController
+@RequestMapping("/api/persons")
 public class PersonController {
 
     @Autowired
@@ -20,8 +21,25 @@ public class PersonController {
     public ResponseEntity<?> getPersons(){
         List<PersonFetchDto> persons = personService.getPersons();
         return ResponseEntity.status(HttpStatus.OK).body(persons);
-
-
-
     }
+
+    @GetMapping("/{personId}")
+    public ResponseEntity<?> getPersonById(
+            @PathVariable("personId") Integer personId
+    ){
+        PersonFetchDto person = personService.getPersonById(personId);
+        return ResponseEntity.status(HttpStatus.OK).body(person);
+    }
+
+    @PostMapping
+    public ResponseEntity<?> createPerson(
+            @RequestBody PersonCreationDto dto
+            ){
+
+        personService.createUser(dto);
+        return ResponseEntity.status(HttpStatus.CREATED).body("successfully created");
+    }
+
+
+
 }
