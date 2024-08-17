@@ -1,6 +1,6 @@
-package com.tony.hospitalapi.Repository;
+package com.tony.hospitalapi.persons.repository;
 
-import com.tony.hospitalapi.model.Person;
+import com.tony.hospitalapi.persons.model.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,10 +1,8 @@
-package com.tony.hospitalapi.service;
-import com.tony.hospitalapi.Repository.PersonRepository;
-import com.tony.hospitalapi.dto.PersonCreationDto;
-import com.tony.hospitalapi.dto.PersonFetchDto;
-import com.tony.hospitalapi.model.Gender;
-import com.tony.hospitalapi.model.MaritalStatus;
-import com.tony.hospitalapi.model.Person;
+package com.tony.hospitalapi.persons.service;
+import com.tony.hospitalapi.persons.repository.PersonRepository;
+import com.tony.hospitalapi.persons.dto.PersonCreationDto;
+import com.tony.hospitalapi.persons.dto.PersonFetchDto;
+import com.tony.hospitalapi.persons.model.Person;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

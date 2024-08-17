@@ -1,7 +1,7 @@
-package com.tony.hospitalapi.controller;
-import com.tony.hospitalapi.dto.PersonCreationDto;
-import com.tony.hospitalapi.dto.PersonFetchDto;
-import com.tony.hospitalapi.service.PersonService;
+package com.tony.hospitalapi.persons.controller;
+import com.tony.hospitalapi.persons.dto.PersonCreationDto;
+import com.tony.hospitalapi.persons.dto.PersonFetchDto;
+import com.tony.hospitalapi.persons.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

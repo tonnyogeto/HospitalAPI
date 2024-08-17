@@ -1,4 +1,4 @@
-package com.tony.hospitalapi.model;
+package com.tony.hospitalapi.persons.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

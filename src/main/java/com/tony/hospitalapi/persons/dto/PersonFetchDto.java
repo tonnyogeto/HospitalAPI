@@ -1,7 +1,7 @@
-package com.tony.hospitalapi.dto;
+package com.tony.hospitalapi.persons.dto;
 
-import com.tony.hospitalapi.model.Gender;
-import com.tony.hospitalapi.model.MaritalStatus;
+import com.tony.hospitalapi.persons.model.Gender;
+import com.tony.hospitalapi.persons.model.MaritalStatus;
 import lombok.Data;
 
 @Data
